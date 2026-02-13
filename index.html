@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Partículas 3D Interactivas</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="panel">
+        <h1>Partículas 3D</h1>
+        <p class="subtitle">Control por gestos en tiempo real</p>
+
+        <label class="field">
+          <span>Plantilla</span>
+          <select id="presetSelect">
+            <option value="heart">Corazones</option>
+            <option value="flower">Flores</option>
+            <option value="saturn">Saturno</option>
+            <option value="fireworks">Fuegos Artificiales</option>
+            <option value="jarvis">JARVIS (Ironman)</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Color principal</span>
+          <input id="primaryColor" type="color" value="#66ccff" />
+        </label>
+
+        <label class="field">
+          <span>Color secundario</span>
+          <input id="secondaryColor" type="color" value="#ff5ea8" />
+        </label>
+
+        <div class="chips">
+          <span class="chip"><b>✋ Mano abierta:</b> expande partículas</span>
+          <span class="chip"><b>✊ Mano cerrada:</b> contrae partículas</span>
+          <span class="chip"><b>↔ Desplazar:</b> mueve el sistema</span>
+          <span class="chip"><b>🤏 Pinza:</b> impulso / explosión</span>
+          <span class="chip"><b>👐 Dos manos:</b> escala global</span>
+        </div>
+
+        <button id="toggleCamera" class="btn">Iniciar cámara</button>
+        <p id="status" class="status">Cámara inactiva</p>
+      </aside>
+
+      <main class="stage-wrap">
+        <canvas id="stage"></canvas>
+        <video id="video" playsinline webkit-playsinline muted></video>
+      </main>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

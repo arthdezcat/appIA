@@ -1,0 +1,134 @@
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: Inter, Segoe UI, Roboto, system-ui, sans-serif;
+  background: radial-gradient(circle at 20% 10%, #172033, #0b101a 55%);
+  color: #eaf2ff;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  width: 100%;
+  height: 100%;
+}
+
+.panel {
+  padding: 18px;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  background: rgba(11, 16, 26, 0.72);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.subtitle {
+  margin: 0;
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.88rem;
+}
+
+select,
+input[type="color"] {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 10px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #eaf2ff;
+}
+
+input[type="color"] {
+  padding: 4px;
+  height: 42px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  font-size: 0.73rem;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(127, 179, 255, 0.14);
+  border: 1px solid rgba(127, 179, 255, 0.28);
+}
+
+.btn {
+  border: 0;
+  border-radius: 12px;
+  padding: 11px 12px;
+  font-weight: 600;
+  color: #071220;
+  background: linear-gradient(90deg, #7ab8ff, #8ed5ff);
+  cursor: pointer;
+}
+
+.status {
+  margin: 0;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.stage-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#stage {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#video {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  width: 220px;
+  border-radius: 14px;
+  opacity: 0.55;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transform: scaleX(-1);
+}
+
+@media (max-width: 900px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .panel {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
